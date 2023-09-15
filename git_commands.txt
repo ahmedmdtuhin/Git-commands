@@ -104,7 +104,13 @@ $git config --global alias.st status; now if I write st it will work as status!
 $git config --global alias.unstage 'restore --staged --';
 
 
-
+echo "# Git-commands" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:ahmedmdtuhin/Git-commands.git
+git push -u origin main
 
 
 
