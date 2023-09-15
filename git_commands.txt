@@ -1,0 +1,111 @@
+Git configuration:
+
+$git config --global user.name "Tuhin"
+$git config --global user.email "ahmedmd.tuhin@yahoo.com"
+
+to check configuration:
+$git config --list
+$git config user.name
+$git config user.email
+
+git commands:
+
+
+git status checking : $git status
+to make a git repositaroy : $git init
+to add all the files together : $git add --a (means all the files are now in ataging area)/ $git add .
+to commit files : $git commit -m "Message I want ot commit"
+to know all the commits : $git log
+
+
+to add a single file : $git add filename.txt
+to delete all the files from directory : $rm  -rf .git (to delete .git folder)
+
+to clone a repositaroy : $git clone url newname_if_I_want_to_name_it
+
+To ignore a file:
+
+make a .gitignore file and write the file name inside it, ei, "error.log" need to copy the file name in .gitignore.
+we can also just write "*.log". so git will ignore all the log files.
+//erro.log
+//erro - Copy (2).log
+*.log
+directory/
+
+
+Git difference:
+$git diff : this will compare working directory to statting area
+$git diff --staged : will compare previous commit vs current staging area
+
+Direct commit, by skipping stagging:
+does not work for newly added untraced files, for untracekd we must stage first.
+$git commit -a -m "Dirrect commit"
+
+
+Moving and renaming files in git:
+$git rm file_or_directory_name; $git rm -rf filename, deletes permanently!!
+$git mv previous_file_name new_renamed_file_name; to rename a file
+$git rm --cached filename; to untrack a file
+
+
+Viewing and changing commits:
+$git log; for viewing all the commits
+$git log -2; for only 2 commits.
+
+$git log -p;to see the chnanges in files of a commit, it will show the chnages with that commit
+$git log -p -2; means it will do the same thing but only for 2 commits.If I write -3,it will show for 3 commits
+
+$git log --stat;summary of commit and changes of files
+$git log --stat -2;same thing but for 2 commits only.
+
+$git log --pretty=oneline;shows all the commits in one line
+$git log pretty=short;show in short form, not details, shows commit and author mostly
+$git log --pretty=full; shows like general git log
+
+$git log --since=2.days; shows all the commits done by last two days
+$git log --since=2.weeks;
+$git log --since=2.months;shows all commits done by last 2 months
+$git log --since=2.years;
+
+https://git-scm.com/docs/git-log
+
+$git log --pretty=format:"%h= --%an";
+$git log --pretty=format:"%h= --%ae";
+
+changing commit:
+git commit --amend; to chnage or modify the commit; press I to edit, press escape,: and wq and enter
+
+Unstaging and unmodified files in GIT:
+$git restore --staged filename; this will remove the file from staging area to modified area.
+$git checkout -- filename; it will take to me previous commited version from modified. for this i have to first take files to modified from stagging area.
+$git chekout -f; this will take my working directory to previos commit.doesnt matter my files are modified or staged!
+
+
+GIT hub:
+$git remote add origin https://github.com/ahmedmdtuhin/git_tutorial.git
+$git remote -v
+git push -u origin main
+
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+$ eval "$(ssh-agent -s)"
+ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-add ~/.ssh/id_ed25519
+$ clip < ~/.ssh/id_ed25519.pub
+$tail  ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP48sFPl/3mNfO8XK8Ja6cjF8e/at+302kqeI3512lDU ahmedmd.tuhin@yahoo.com
+
+git push -u origin master
+git push
+
+
+Alias in git:Custom git comand!
+$git config --global alias.st status; now if I write st it will work as status!
+$git config --global alias.unstage 'restore --staged --';
+
+
+
+
+
+
+
