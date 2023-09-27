@@ -76,7 +76,7 @@ changing commit:
 git commit --amend; to chnage or modify the commit; press I to edit, press escape,: and wq and enter
 
 Unstaging and unmodified files in GIT:
-$git restore --staged filename; this will remove the file from staging area to modified area.
+$git restore --staged filename; this will remove the file from staging area to modified area.To discard modification.
 $git checkout -- filename; it will take to me previous commited version from modified. for this i have to first take files to modified from stagging area.
 $git chekout -f; this will take my working directory to previos commit.doesnt matter my files are modified or staged!
 
@@ -112,6 +112,32 @@ git branch -M main
 git remote add origin git@github.com:ahmedmdtuhin/Git-commands.git
 git push -u origin main
 
+Branches:
+$git checkout -b newbranch;it will creat a new branch.
+$git checkout master; shifting to master branch
+$git checkout branchname; shifting to branchname (which is a branch)
+$git branch; it will show all the branches.
 
+Branches merge:
+$git branch:It will show all the branches
+$git brnach -v ;same thing with details
+$git branch --merged; it shows all the merged branched.
+$git branch --no-merged; it show those branches are not merged yet.
+$git branch -d branchname;it deletes the branch,but if the branch is not merged already it shows error.In that case we need to write "D"
+$git branch -D branchnaem;if the branch is not merged.
 
+$git merge branch_name_that_I_want_to_merge_with_my_current_branch
+$conflict solution
+$git add .
+$git Commit
+to exit the vm :wq enter.
+
+Branch push/pull:
+$git remote;
+$git remote -v ; to check if I have remote alredy or not
+$git push origin branchname;to do this,first I have to checkout in this branch that I want to push.Its not mandatory but its a good practice.
+$git push origin branchname:rename; this rename will be shown on github but locally it will be named as branchname.
+$git push origin -d branchname; to delete remote branch.
+
+so far its okey, further will learn while working real projects!
 
